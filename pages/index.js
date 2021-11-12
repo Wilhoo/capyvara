@@ -26,7 +26,7 @@ export default function Home({posts}) {
       
       <ContainerNews>
         {posts.map((post, index) => (
-            <News post={post} />
+            <News key={post.slug} post={post} />
         ))}
       </ContainerNews>
     </div>
