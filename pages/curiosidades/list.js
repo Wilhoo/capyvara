@@ -3,8 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import Head from 'next/head'
 
-import News from '../components/News'
-import {sortByDate} from '../utils'
+import News from '../../components/News'
+import {sortByDate} from '../../utils'
 
 import styled from "styled-components"
 
@@ -18,7 +18,18 @@ const ContainerNews = styled.div`
 `
 
 export default function Home({posts}) {
-  console.log(posts)
+
+  const filteredPosts = posts.map((posts) => {
+    if(posts.frontmatter.tag == 'Curiosidades') {
+      return posts
+    }
+  })
+
+  var filtered = filteredPosts.filter(function (el) {
+    return el != null;
+  });
+
+  console.log(filtered)
 
   return (
     <div>
@@ -27,7 +38,7 @@ export default function Home({posts}) {
       </Head>
       
       <ContainerNews>
-        {posts.map((post, index) => (
+        {filtered.map((post, index) => (
             <News key={post.slug} post={post} />
         ))}
       </ContainerNews>

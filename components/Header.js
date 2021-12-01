@@ -16,17 +16,23 @@ const ContainerHeader = styled.div`
 
   img {
     width: 200px !important;
+    height: 150px !important;
+
+    bottom: 80px !important;
+
+    max-height: none;
   }
 `
 
-const ButtonOptions = styled.button`
+const ButtonOptions = styled.a`
   padding: 10px;
   color: #FFF;
-  margin: 10px;
+  margin: 12px 10px;
   border: none;
   background-color: transparent;
   font-family: 'Yeseva One', cursive;
   font-size: 16px;
+  text-decoration: none;
 
   :hover {
     color: #ffbd59
@@ -50,20 +56,21 @@ export default function Header() {
   return (
     <>
       <ContainerHeader>
-          
-          <Link href='/'> 
-            <Image
-              src="/assets/logos/logo_transparente_branco.png"
-              alt="My Image"
-              width={185}
-              height={165}/> 
-          </Link>
-          <ButtonOptions>Filmes/Séries</ButtonOptions>
-          <ButtonOptions>CapyBRA</ButtonOptions>
-          <ButtonOptions>Curiosidades</ButtonOptions>
-          <ButtonOptions>Música</ButtonOptions>
-          <ButtonOptions>Leitura</ButtonOptions>
-          <ButtonOptions>Manual da G-Z</ButtonOptions>
+          <div style={{position: 'relative'}}>
+            <Link href='/'> 
+              <Image
+                src="/assets/logos/logo_transparente_branco.png"
+                alt="My Image"
+                width={185}
+                height={165}/> 
+            </Link>
+          </div>
+          <ButtonOptions href='/filmes_series/list'>Filmes/Séries</ButtonOptions>
+          <ButtonOptions href='/capybra/list'>CapyBRA</ButtonOptions>
+          <ButtonOptions href='/curiosidades/list'>Curiosidades</ButtonOptions>
+          <ButtonOptions href='/musica/list'>Música</ButtonOptions>
+          <ButtonOptions href='/leitura/list'>Leitura</ButtonOptions>
+          <ButtonOptions href='/manual_gz/list'>Manual da G-Z</ButtonOptions>
           <InputSearch placeholder='Digite o que procura'></InputSearch>
       </ContainerHeader>
     </>
