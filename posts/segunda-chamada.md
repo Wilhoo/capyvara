@@ -4,7 +4,7 @@ date: 'Novembro 09, 2021'
 excerpt: 'Na segunda temporada, a série traz à tona novos assuntos essenciais que norteiam a educação do nosso país, além de retomar temas já abordados na sua primeira temporada.'
 cover_image: '/assets/posts/img3.jpg'
 author: Felipe Ferreira
-tag: Filmes/Séries
+tag: CapyBRA
 ---
 
 Emocionante, realista, inspiradora e necessária, essas são as 4 palavras que

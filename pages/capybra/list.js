@@ -38,11 +38,14 @@ export default function Home({posts}) {
       </Head>
       
       <ContainerNews>
-        {filtered.length == 0 &&
+        {filtered.map((post, index) => (
+            <News key={post.slug} post={post} />
+        ))}
+        {/* {filtered.length == 0 &&
           <span>
             Ainda não existem publicações para esse tipo de lista!
           </span>
-        }
+        } */}
       </ContainerNews>
     </div>
   )
