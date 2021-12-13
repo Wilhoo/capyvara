@@ -17,13 +17,15 @@ const ImageAdjust = styled.img`
 `;
 
 const Tag = styled.span`
+  font-family: 'Roboto';
   font-size: 17px;
   color: #7e709b;
   font-weight: 700;
 `
 
 const TitleNews = styled.h3`
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Roboto';
+  font-weight: bold;
   color: #000;
 `
 

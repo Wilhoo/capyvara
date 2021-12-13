@@ -62,13 +62,13 @@ const MainText = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Roboto';
   margin-top: 15px;
   font-size: 40px;
 `;
 
 const Subtitle = styled.h2`
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Roboto';
   color: #aaa;
 `;
 

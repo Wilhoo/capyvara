@@ -16,7 +16,7 @@ const ContainerFooter = styled.div`
 
   span {
     color: #fff;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Roboto';
     text-align: center;
   }
 `
@@ -34,7 +34,7 @@ const ButtonOptions = styled.button`
   margin: 10px;
   border: none;
   background-color: transparent;
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Roboto';
   font-size: 16px;
 
   :hover {
@@ -61,7 +61,6 @@ export default function Footer() {
       <ContainerFooter>
             <ButtonOptions>Quem somos</ButtonOptions>
             <ButtonOptions>Contato</ButtonOptions>
-            <ButtonOptions>Equipe</ButtonOptions>
             <span>Made with ❤️ by Bilho</span>
       </ContainerFooter>
     </>

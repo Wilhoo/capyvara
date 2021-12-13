@@ -18,7 +18,7 @@ const ContainerHeader = styled.div`
     width: 200px !important;
     height: 150px !important;
 
-    bottom: 80px !important;
+    bottom: 85px !important;
 
     max-height: none;
   }
@@ -27,10 +27,10 @@ const ContainerHeader = styled.div`
 const ButtonOptions = styled.a`
   padding: 10px;
   color: #FFF;
-  margin: 12px 10px;
+  margin: 16px 10px;
   border: none;
   background-color: transparent;
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   text-decoration: none;
 
