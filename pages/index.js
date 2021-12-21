@@ -6,12 +6,15 @@ import Head from 'next/head'
 import News from '../components/News'
 import {sortByDate} from '../utils'
 
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'
+
 import styled from "styled-components"
 
 const ContainerNews = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #eee;
+  background-color: #fff;
   max-width: 1000px;
   margin: auto;
   margin-top: 70px;
@@ -20,6 +23,30 @@ const ContainerNews = styled.div`
 export default function Home({posts}) {
   console.log(posts)
 
+  const [search, setSearch] = useState()
+  const [flagSearch, setFlagSearch] = useState(false)
+  const [postsSearched, setPostsSearched] = useState()
+
+  const { asPath } = useRouter()
+
+  useEffect(() => {
+    if(asPath.includes('search')) {
+      setSearch(localStorage.getItem('searchValue'))
+
+      const teste = posts.map((key) => {
+        if(key.frontmatter.title.includes(search) && search) {
+          return key
+        }
+      })
+
+      var filteredSearch = teste.filter(function(el) { return el; });
+
+      setPostsSearched(filteredSearch)
+    }
+  }, [asPath, posts, search])
+
+  console.log(postsSearched)
+
   return (
     <div>
       <Head>
@@ -27,9 +54,15 @@ export default function Home({posts}) {
       </Head>
       
       <ContainerNews>
-        {posts.map((post, index) => (
+        {
+          postsSearched != undefined && postsSearched.length > 0  ?
+          postsSearched.map((post, index) => (
             <News key={post.slug} post={post} />
-        ))}
+          )):
+          posts.map((post, index) => (
+            <News key={post.slug} post={post} />
+        ))
+        }
       </ContainerNews>
     </div>
   )

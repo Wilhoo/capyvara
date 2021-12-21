@@ -2,6 +2,11 @@ import Link from 'next/link'
 import styled from "styled-components"
 import Image from 'next/image'
 
+import { GiMagnifyingGlass } from 'react-icons/gi';
+
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react';
+
 import LogoTransparentWhite from '../public/assets/logos/logo_transparente_branco.png'
 
 const ContainerHeader = styled.div`
@@ -39,6 +44,23 @@ const ButtonOptions = styled.a`
   }
 `
 
+const ButtonOptionsSearch = styled.a`
+  position: relative;
+  padding: 10px;
+  color: #000;
+  top: 7px;
+  right: 55px;
+  margin: 16px 10px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+
+  :hover {
+    color: #7e709b
+  }
+`
+
 const InputSearch = styled.input`
   padding: 10px;
   height: 50px;
@@ -53,6 +75,35 @@ const Logo = styled.img`
 
 
 export default function Header() {
+  const [search, setSearch] = useState()
+  const [flagSearch, setFlagSearch] = useState(false)
+  const [getURL, setGetURL] = useState()
+
+  const { asPath } = useRouter()
+
+  useEffect(() => {
+    setGetURL(window.location.origin)
+  }, []);
+
+  useEffect(() => {
+    const listener = event => {
+      if (event.code === "Enter" || event.code === "NumpadEnter") {
+        window.location = `${getURL}/?search=${search}`
+        event.preventDefault();
+      }
+    };
+    document.addEventListener("keydown", listener);
+    return () => {
+      document.removeEventListener("keydown", listener);
+    };
+  }, [search]);
+
+
+  const saveSearch = () => {
+    localStorage.setItem("searchValue", search)
+    setFlagSearch(!flagSearch)
+  }
+
   return (
     <>
       <ContainerHeader>
@@ -71,7 +122,10 @@ export default function Header() {
           <ButtonOptions href='/musica/list'>Música</ButtonOptions>
           <ButtonOptions href='/leitura/list'>Leitura</ButtonOptions>
           <ButtonOptions href='/manual_gz/list'>Manual da G-Z</ButtonOptions>
-          <InputSearch placeholder='Digite o que procura'></InputSearch>
+          <form>
+            <InputSearch id="submit" placeholder='Faça a sua busca' value={search} onInput={e => setSearch(e.target.value)}></InputSearch>
+            <ButtonOptionsSearch onClick={saveSearch} href={`${getURL}/?search=${search}`}><GiMagnifyingGlass size={25}/></ButtonOptionsSearch>
+          </form>
       </ContainerHeader>
     </>
   )

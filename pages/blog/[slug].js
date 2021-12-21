@@ -21,9 +21,10 @@ const BodyNews = styled.div`
   display: flex;
   align-items: center;
 
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
 
+  background: #fff;
   margin-top: 70px;
 `;
 
@@ -31,6 +32,7 @@ const DetailNews = styled.div`
   display: flex;
 
   span {
+    font-family: 'Roboto';
     margin-left: 30px;
     color: #eb9616;
     margin-top: 15px;
@@ -40,9 +42,10 @@ const DetailNews = styled.div`
 `;
 
 const MainText = styled.div`
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  max-width: 650px;
+  max-width: 950px;
   margin-top: 25px;
 
   span {
@@ -64,12 +67,15 @@ const MainText = styled.div`
 const Title = styled.h1`
   font-family: 'Roboto';
   margin-top: 15px;
-  font-size: 40px;
+  font-size: 45px;
+  margin-left: 20px;
 `;
 
 const Subtitle = styled.h2`
   font-family: 'Roboto';
-  color: #aaa;
+  color: #a7a7a7;
+  padding: 10px;
+  text-align: center;
 `;
 
 
@@ -87,7 +93,6 @@ export default function NewsContent({frontmatter: {title, excerpt, date, cover_i
         <DetailNews>
           <span>{author}</span>
           <span>{date}</span>
-          <span>Horário 20:20</span>
         </DetailNews>
         <ImageCover src={cover_image} />
         <MainText dangerouslySetInnerHTML={{__html: marked

@@ -11,7 +11,7 @@ import styled from "styled-components"
 const ContainerNews = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #eee;
+  background-color: #fff;
   max-width: 1000px;
   margin: auto;
   margin-top: 70px;
@@ -28,8 +28,6 @@ export default function Home({posts}) {
   var filtered = filteredPosts.filter(function (el) {
     return el != null;
   });
-
-  console.log(filtered)
 
   return (
     <div>
