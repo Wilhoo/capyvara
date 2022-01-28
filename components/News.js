@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import styled from "styled-components"
 
+import { Row, Container, Col } from 'react-bootstrap'
+
 import Window from '../assets/window.jpeg'
 
-const Container = styled.div`
+const PureContainer = styled.div`
   padding: 10px;
   margin: 5px;
   display: flex;
@@ -39,15 +41,15 @@ const LinkNews = styled.a`
 
 export default function News({post}) {
   return (
-        <LinkNews href={`/blog/${post.slug}`}>
-          <Container>
-            <ImageAdjust src={post.frontmatter.cover_image} />
-            <SideContent>
-              <Tag>{post.frontmatter.tag}</Tag>
-              <TitleNews>{post.frontmatter.title}</TitleNews>
-            </SideContent>
-          </Container>
-        </LinkNews>
+    <LinkNews href={`/blog/${post.slug}`}>
+      <PureContainer>
+        <ImageAdjust src={post.frontmatter.cover_image} />
+        <SideContent>
+          <Tag>{post.frontmatter.tag}</Tag>
+          <TitleNews>{post.frontmatter.title}</TitleNews>
+        </SideContent>
+      </PureContainer>
+    </LinkNews>
   )
 }
 

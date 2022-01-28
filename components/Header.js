@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react';
 
 import LogoTransparentWhite from '../public/assets/logos/logo_transparente_branco.png'
+import {DropdownButton, Dropdown, Container} from 'react-bootstrap';
 
 const ContainerHeader = styled.div`
   display: flex;
@@ -48,7 +49,6 @@ const ButtonOptionsSearch = styled.a`
   position: relative;
   padding: 10px;
   color: #000;
-  top: 7px;
   right: 55px;
   margin: 16px 10px;
   border: none;
@@ -106,27 +106,27 @@ export default function Header() {
 
   return (
     <>
-      <ContainerHeader>
-          <div style={{position: 'relative'}}>
-            <Link href='/'> 
-              <Image
-                src="/assets/logos/logo_transparente_branco.png"
-                alt="My Image"
-                width={185}
-                height={165}/> 
-            </Link>
-          </div>
-          <ButtonOptions href='/filmes_series/list'>Filmes/Séries</ButtonOptions>
-          <ButtonOptions href='/capybra/list'>CapyBRA</ButtonOptions>
-          <ButtonOptions href='/curiosidades/list'>Curiosidades</ButtonOptions>
-          <ButtonOptions href='/musica/list'>Música</ButtonOptions>
-          <ButtonOptions href='/leitura/list'>Leitura</ButtonOptions>
-          <ButtonOptions href='/manual_gz/list'>Manual da G-Z</ButtonOptions>
-          <form>
-            <InputSearch id="submit" placeholder='Faça a sua busca' value={search} onInput={e => setSearch(e.target.value)}></InputSearch>
-            <ButtonOptionsSearch onClick={saveSearch} href={`${getURL}/?search=${search}`}><GiMagnifyingGlass size={25}/></ButtonOptionsSearch>
-          </form>
-      </ContainerHeader>
+        <ContainerHeader>
+            <div style={{position: 'relative'}}>
+              <Link href='/'> 
+                <Image
+                  src="/assets/logos/logo_transparente_branco.png"
+                  alt="My Image"
+                  width={185}
+                  height={165}/> 
+              </Link>
+            </div>
+            <ButtonOptions href='/filmes_series/list'>Filmes/Séries</ButtonOptions>
+            <ButtonOptions href='/capybra/list'>CapyBRA</ButtonOptions>
+            <ButtonOptions href='/curiosidades/list'>Curiosidades</ButtonOptions>
+            <ButtonOptions href='/musica/list'>Música</ButtonOptions>
+            <ButtonOptions href='/leitura/list'>Leitura</ButtonOptions>
+            <ButtonOptions href='/manual_gz/list'>Manual da G-Z</ButtonOptions>
+            <form>
+              <InputSearch id="submit" placeholder='Faça a sua busca' value={search} onInput={e => setSearch(e.target.value)}></InputSearch>
+              <ButtonOptionsSearch onClick={saveSearch} href={`${getURL}/?search=${search}`}><GiMagnifyingGlass size={25}/></ButtonOptionsSearch>
+            </form>
+        </ContainerHeader>
     </>
   )
 }
