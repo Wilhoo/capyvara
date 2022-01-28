@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import styled from "styled-components"
 
-import Header from '../../components/Header'
+import Header from '../../components/Header2'
 
 const ImageCover = styled.img`
   width: auto;
