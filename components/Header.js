@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import Link from 'next/link'
 import styled from "styled-components"
 import Image from 'next/image'
@@ -56,6 +57,12 @@ const ButtonOptionsSearch = styled.a`
   font-size: 16px;
   text-decoration: none;
 
+  @media (max-width: 1023px) {
+   right: 0px;
+   left: 140px;
+   bottom: 35px
+  }
+
   :hover {
     color: #7e709b
   }
@@ -66,11 +73,28 @@ const InputSearch = styled.input`
   height: 50px;
   margin-top: 8px;
   border-radius: 15px;
+
+  @media (max-width: 1023px) {
+   margin-left: 10px;
+   margin-top: 15px;
+  }
 `;
 
-const Logo = styled.img`
-  height: 165px;
-  margin-top: -50px;
+const ContainerHeaderMobile = styled.div`
+  display: flex;
+  /* position: relative; */
+  background-color: #3a2a5f;
+  width: 550px;
+
+  #dropdown-basic-button {
+    /* border-color: none */
+    display:flex;
+    position: relative;
+    top: 20px;
+    background-color: transparent;
+    border-color: transparent !important;
+    font-size: 20px;
+  }
 `;
 
 
@@ -78,6 +102,7 @@ export default function Header() {
   const [search, setSearch] = useState()
   const [flagSearch, setFlagSearch] = useState(false)
   const [getURL, setGetURL] = useState()
+  const [getWidth, setGetWidth] = useState()
 
   const { asPath } = useRouter()
 
@@ -98,36 +123,71 @@ export default function Header() {
     };
   }, [search]);
 
+  useEffect(() => {
+    setGetWidth(window.innerWidth)
+  }, []);
+
 
   const saveSearch = () => {
     localStorage.setItem("searchValue", search)
     setFlagSearch(!flagSearch)
   }
 
+  console.log()
+
   return (
-    <>
-        <ContainerHeader>
-            <div style={{position: 'relative'}}>
-              <Link href='/'> 
-                <Image
-                  src="/assets/logos/logo_transparente_branco.png"
-                  alt="My Image"
-                  width={185}
-                  height={165}/> 
-              </Link>
-            </div>
-            <ButtonOptions href='/filmes_series/list'>Filmes/Séries</ButtonOptions>
-            <ButtonOptions href='/capybra/list'>CapyBRA</ButtonOptions>
-            <ButtonOptions href='/curiosidades/list'>Curiosidades</ButtonOptions>
-            <ButtonOptions href='/musica/list'>Música</ButtonOptions>
-            <ButtonOptions href='/leitura/list'>Leitura</ButtonOptions>
-            <ButtonOptions href='/manual_gz/list'>Manual da G-Z</ButtonOptions>
-            <form>
-              <InputSearch id="submit" placeholder='Faça a sua busca' value={search} onInput={e => setSearch(e.target.value)}></InputSearch>
-              <ButtonOptionsSearch onClick={saveSearch} href={`${getURL}/?search=${search}`}><GiMagnifyingGlass size={25}/></ButtonOptionsSearch>
-            </form>
-        </ContainerHeader>
-    </>
+    getWidth > 1024 ?
+      <>
+          <ContainerHeader>
+              <div style={{position: 'relative'}}>
+                <Link href='/'> 
+                  <Image
+                    src="/assets/logos/logo_transparente_branco.png"
+                    alt="My Image"
+                    width={185}
+                    height={165}/> 
+                </Link>
+              </div>
+              <ButtonOptions href='/filmes_series/list'>Filmes/Séries</ButtonOptions>
+              <ButtonOptions href='/capybra/list'>CapyBRA</ButtonOptions>
+              <ButtonOptions href='/curiosidades/list'>Curiosidades</ButtonOptions>
+              <ButtonOptions href='/musica/list'>Música</ButtonOptions>
+              <ButtonOptions href='/leitura/list'>Leitura</ButtonOptions>
+              <ButtonOptions href='/manual_gz/list'>Manual da G-Z</ButtonOptions>
+              <form>
+                <InputSearch id="submit" placeholder='Faça a sua busca' value={search} onInput={e => setSearch(e.target.value)}></InputSearch>
+                <ButtonOptionsSearch onClick={saveSearch} href={`${getURL}/?search=${search}`}><GiMagnifyingGlass size={25}/></ButtonOptionsSearch>
+              </form>
+          </ContainerHeader>
+      </>
+      :
+      <>
+        <ContainerHeaderMobile>
+         
+          <DropdownButton id="dropdown-basic-button" title="CATEGORIAS">
+            <Dropdown.Item href='/filmes_series/list'>Filmes/Séries</Dropdown.Item>
+            <Dropdown.Item href='/capybra/list'>CapyBRA</Dropdown.Item>
+            <Dropdown.Item href='/curiosidades/list'>Curiosidades</Dropdown.Item>
+            <Dropdown.Item href='/musica/list'>Música</Dropdown.Item>
+            <Dropdown.Item href='/leitura/list'>Leitura</Dropdown.Item>
+            <Dropdown.Item href='/manual_gz/list'>Manual da G-Z</Dropdown.Item>
+          </DropdownButton>
+
+          <Link href='/'> 
+            <Image
+              src="/assets/logos/logo_transparente_branco.png"
+              alt="My Image"
+              width={185}
+              height={50}/> 
+          </Link>
+
+          <form>
+            <InputSearch id="submit" placeholder='Faça a sua busca' value={search} onInput={e => setSearch(e.target.value)}></InputSearch>
+            <ButtonOptionsSearch onClick={saveSearch} href={`${getURL}/?search=${search}`}><GiMagnifyingGlass size={25}/></ButtonOptionsSearch>
+          </form>
+        </ContainerHeaderMobile>
+        
+      </>
   )
 }
 

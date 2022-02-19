@@ -11,7 +11,7 @@ const ContainerFooter = styled.div`
   justify-content: center;
   
 
-  /* height: 150px; */
+  height: 100%;
   width: 100%;
 
   span {
@@ -19,13 +19,10 @@ const ContainerFooter = styled.div`
     font-family: 'Roboto';
     text-align: center;
   }
-`
 
-const PositionInfos = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  
+  @media (max-width: 1023px) {
+   width: 550px;
+  }
 `
 
 const ButtonOptions = styled.button`
@@ -41,19 +38,6 @@ const ButtonOptions = styled.button`
     color: #ffbd59
   }
 `
-
-const InputSearch = styled.input`
-  padding: 10px;
-  height: 50px;
-  margin-top: 8px;
-  border-radius: 15px;
-`;
-
-const Logo = styled.img`
-  height: 165px;
-  margin-top: -50px;
-`;
-
 
 export default function Footer() {
   return (

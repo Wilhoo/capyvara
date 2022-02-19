@@ -18,6 +18,10 @@ const ContainerNews = styled.div`
   max-width: 1000px;
   margin: auto;
   margin-top: 70px;
+
+  @media (max-width: 1023px) {
+   margin-top: 0;
+  }
 `
 
 export default function Home({posts}) {

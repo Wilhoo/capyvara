@@ -26,6 +26,11 @@ const BodyNews = styled.div`
 
   background: #fff;
   margin-top: 70px;
+
+  @media (max-width: 1023px) {
+   width: 550px;
+   margin-top: 0;
+  }
 `;
 
 const DetailNews = styled.div`
@@ -86,7 +91,7 @@ const Subtitle = styled.h2`
 export default function NewsContent({frontmatter: {title, excerpt, date, cover_image, author}, frontmatter, slug, content}) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <BodyNews>
         <Title>{title}</Title>
         <Subtitle>{excerpt}</Subtitle>

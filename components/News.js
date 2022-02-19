@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import Link from 'next/link'
 import styled from "styled-components"
 
@@ -10,12 +11,20 @@ const PureContainer = styled.div`
   margin: 5px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 1023px) {
+   flex-direction: column;
+  }
 `;
 
 const ImageAdjust = styled.img`
   max-height: 240px;
   max-width: 400px;
   width: 100%;
+
+  @media (max-width: 1023px) {
+   max-width: 100%;
+  }
 `;
 
 const Tag = styled.span`
@@ -29,14 +38,26 @@ const TitleNews = styled.h3`
   font-family: 'Roboto';
   font-weight: bold;
   color: #000;
+
+  @media (max-width: 1023px) {
+    font-size: 23px;
+  }
 `
 
 const SideContent = styled.div`
   margin-left: 25px;
+
+  @media (max-width: 1023px) {
+    margin-left: 0px;
+  }
 `
 
 const LinkNews = styled.a`
   text-decoration: none;
+
+  @media (max-width: 1023px) {
+   width: 540px;
+  }
 `;
 
 export default function News({post}) {
