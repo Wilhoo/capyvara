@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
+import { useState, useEffect } from 'react';
 
 import styled from "styled-components"
 
@@ -66,6 +67,10 @@ const MainText = styled.div`
     max-height: 500px;
     max-width: 600px;
     text-align: center;
+
+    @media (max-width: 1023px) {
+      max-width: 500px;
+    }
   }
 `;
 
