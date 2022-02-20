@@ -10,20 +10,26 @@ const PureContainer = styled.div`
   padding: 10px;
   margin: 5px;
   display: flex;
-  align-items: center;
 
   @media (max-width: 1023px) {
    flex-direction: column;
   }
+
+  @media (min-width: 1023px) {
+    align-items: center;
+  }
 `;
 
-const ImageAdjust = styled.img`
-  max-height: 240px;
+const ImageAdjust = styled.img` 
   max-width: 400px;
   width: 100%;
 
   @media (max-width: 1023px) {
    max-width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    max-height: 240px;
   }
 `;
 
@@ -40,7 +46,7 @@ const TitleNews = styled.h3`
   color: #000;
 
   @media (max-width: 1023px) {
-    font-size: 23px;
+    font-size: 28px;
   }
 `
 
@@ -49,6 +55,7 @@ const SideContent = styled.div`
 
   @media (max-width: 1023px) {
     margin-left: 0px;
+    margin-top: 20px;
   }
 `
 

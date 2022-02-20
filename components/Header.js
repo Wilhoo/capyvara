@@ -85,15 +85,35 @@ const ContainerHeaderMobile = styled.div`
   /* position: relative; */
   background-color: #3a2a5f;
   width: 550px;
+  max-height: 80px;
+
+  span {
+    bottom: 62px;
+    height: 195px !important;
+  }
 
   #dropdown-basic-button {
     /* border-color: none */
     display:flex;
     position: relative;
-    top: 20px;
+    top: 18px;
     background-color: transparent;
     border-color: transparent !important;
     font-size: 20px;
+  }
+
+  .dropdown-menu {
+    background-color: #3a2a5f;
+  }
+
+  .dropdown-toggle::after {
+    margin-top: 12px;
+  }
+
+  .dropdown-item {
+    font-size: 24px;
+    background-color: #3a2a5f;
+    color: #fff;
   }
 `;
 
