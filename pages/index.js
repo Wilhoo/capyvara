@@ -37,19 +37,17 @@ export default function Home({posts}) {
     if(asPath.includes('search')) {
       setSearch(localStorage.getItem('searchValue'))
 
-      const teste = posts.map((key) => {
+      const valueSearch = posts.map((key) => {
         if(key.frontmatter.title.includes(search) && search) {
           return key
         }
       })
 
-      var filteredSearch = teste.filter(function(el) { return el; });
+      var filteredSearch = valueSearch.filter(function(el) { return el; });
 
       setPostsSearched(filteredSearch)
     }
   }, [asPath, posts, search])
-
-  console.log(postsSearched)
 
   return (
     <div>
@@ -89,7 +87,6 @@ export async function getStaticProps() {
       frontmatter
     }
   })
-
 
   return {
     props: {

@@ -45,7 +45,6 @@ export default function Footer() {
       <ContainerFooter>
             <ButtonOptions>Quem somos</ButtonOptions>
             <ButtonOptions>Contato</ButtonOptions>
-            <span>Made with ❤️ by Bilho</span>
       </ContainerFooter>
     </>
   )
