@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <>
       <ContainerFooter>
-            <ButtonOptions>Quem somos</ButtonOptions>
+            <ButtonOptions>Equipe</ButtonOptions>
             <ButtonOptions>Contato</ButtonOptions>
       </ContainerFooter>
     </>
