@@ -22,7 +22,7 @@ Se engana quem acredita que a vida da protagonista se trata de mais um romance Ã
 &nbsp;
 \
 &nbsp;
-![Violet Evergarden](/assets/posts/violet/violet_texto.jpg)
+![Violet Evergarden](/assets/posts/violet/violet_movie.png)
 \
 &nbsp;
 \
