@@ -71,6 +71,10 @@ const MainText = styled.div`
     @media (max-width: 1023px) {
       max-width: 500px;
     }
+
+    @media (min-width: 1023px) {
+      margin-left: 80px;
+    }
   }
 `;
 
