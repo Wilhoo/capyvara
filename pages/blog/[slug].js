@@ -86,6 +86,7 @@ const Subtitle = styled.h2`
   color: #a7a7a7;
   padding: 10px;
   text-align: center;
+  font-size: 24px;
 `;
 
 
@@ -93,7 +94,7 @@ const Subtitle = styled.h2`
 // #ffbd59
 
 
-export default function NewsContent({frontmatter: {title, excerpt, date, cover_image, author}, frontmatter, slug, content}) {
+export default function NewsContent({frontmatter: {title, excerpt, date, cover_image, author}, content}) {
   return (
     <>
       {/* <Header /> */}

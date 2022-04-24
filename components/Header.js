@@ -153,8 +153,6 @@ export default function Header() {
     setFlagSearch(!flagSearch)
   }
 
-  console.log()
-
   return (
     getWidth > 1024 ?
       <>

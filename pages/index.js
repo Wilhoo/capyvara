@@ -25,8 +25,6 @@ const ContainerNews = styled.div`
 `
 
 export default function Home({posts}) {
-  console.log(posts)
-
   const [search, setSearch] = useState()
   const [flagSearch, setFlagSearch] = useState(false)
   const [postsSearched, setPostsSearched] = useState()
