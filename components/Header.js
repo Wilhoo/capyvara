@@ -141,12 +141,11 @@ export default function Header() {
     return () => {
       document.removeEventListener("keydown", listener);
     };
-  }, [search]);
+  }, [getURL, search]);
 
   useEffect(() => {
     setGetWidth(window.innerWidth)
   }, []);
-
 
   const saveSearch = () => {
     localStorage.setItem("searchValue", search)
