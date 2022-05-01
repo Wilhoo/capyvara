@@ -27,6 +27,10 @@ const BodyNews = styled.div`
 
   background: #fff;
   margin-top: 70px;
+  
+  h6 {
+    color: #a7a7a7;
+  }
 
   @media (max-width: 1023px) {
    width: 550px;
@@ -59,7 +63,7 @@ const MainText = styled.div`
   }
 
   p {
-    font-size: 22px;
+    font-size: 21px;
     font-family: sans-serif;
   }
 
@@ -73,7 +77,9 @@ const MainText = styled.div`
     }
 
     @media (min-width: 1023px) {
-      margin-left: 80px;
+      width: 75%;
+      margin: auto;
+      display: block;
     }
   }
 `;
@@ -98,7 +104,7 @@ const Subtitle = styled.h2`
 // #ffbd59
 
 
-export default function NewsContent({frontmatter: {title, excerpt, date, cover_image, author}, content}) {
+export default function NewsContent({frontmatter: {title, excerpt, date, cover_image, legend, author}, content}) {
   return (
     <>
       {/* <Header /> */}
@@ -110,6 +116,7 @@ export default function NewsContent({frontmatter: {title, excerpt, date, cover_i
           <span>{date}</span>
         </DetailNews>
         <ImageCover src={cover_image} />
+        <h6>{legend}</h6>
         <MainText dangerouslySetInnerHTML={{__html: marked
           (content)}}>
         </MainText>

@@ -14,8 +14,7 @@ norteiam a educação do nosso país, além de retomar temas já abordados na su
 primeira temporada.
 \
 &nbsp;
-\
-&nbsp;
+
 Segunda Chamada é uma série de 2019, que apresenta a vida dos professores
 e alunos do ensino noturno para jovens e adultos da Escola Estadual Carolina Maria de
 Jesus, abordando as dificuldades e os problemas enfrentados pela educação brasileira.
@@ -24,8 +23,7 @@ Projetada para conter 12 episódios por temporada, esse ano a série entregou ap
 episódios, visto que a pandemia de Covid-19 afetou gravemente a produção da série.
 \
 &nbsp;
-\
-&nbsp;
+
 Mesmo com apenas metade dos episódios prometidos, a série retornou ainda
 mais emocionante que sua primeira temporada. Todos os seus episódios são muito bem
 desenvolvidos, novos personagens foram introduzidos, os antigos personagens
@@ -34,8 +32,7 @@ problemas pessoais com o novo desafio enfrentado pela escola, o perigo do fecham
 por falta de alunos.
 \
 &nbsp;
-\
-&nbsp;
+
 Essa temporada gira em torno do possível fechamento do ensino noturno para
 jovens e adultos (EJA) por falta de alunos, assim, os professores precisam se desdobrar
 para encontrar novos alunos que possam preencher as vagas da escola. A protagonista
@@ -49,8 +46,7 @@ convidadas a voltar a escola e terminarem seus estudos.
 ![Segunda Chamada](/assets/posts/segunda-chamada/segunda_chamada_texto.jpg)
 \
 &nbsp;
-\
-&nbsp;
+
 Um desafio como esse, traz em pauta a discussão de como garantir o acesso a
 educação para pessoas vulneráveis em situação de rua, que são pejorativamente
 chamadas de mendigos ou “sem teto” por muitas pessoas. A série também retorna com
@@ -63,8 +59,7 @@ escolas para pessoas com necessidades especiais, e uma gama de outros assuntos
 que são essenciais para a construção de uma sociedade melhor.
 \
 &nbsp;
-\
-&nbsp;
+
 Segunda chamada é uma série necessária a todos os públicos, que escancara
 os desafios enfrentados pelos professores e alunos do Brasil. Uma série difícil de assistir
 justamente por ser tão real, que emociona em todos os episódios. Ao lado da série Sob
