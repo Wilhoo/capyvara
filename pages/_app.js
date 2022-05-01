@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }) {
       <Script
         id="Adsense-id"
         data-ad-client="ca-pub-5522037622058893"
-        async="true"
+        async
         onError={ (e) => { console.error('Script failed to load', e) }}
-        strategy="beforeInteractive"
+        // strategy="beforeInteractive"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
 

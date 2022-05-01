@@ -119,7 +119,7 @@ const ContainerHeaderMobile = styled.div`
 
 
 export default function Header() {
-  const [search, setSearch] = useState()
+  const [search, setSearch] = useState("")
   const [flagSearch, setFlagSearch] = useState(false)
   const [getURL, setGetURL] = useState()
   const [getWidth, setGetWidth] = useState()
