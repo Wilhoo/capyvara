@@ -1,6 +1,6 @@
 ---
 title: 'A diversidade presente em She-ra e as princesas do poder'
-date: 'Outubro 24, 2022'
+date: '24.10.2022'
 excerpt: 'Sucesso nas críticas, a trama infantil trouxe ao público personagens mais inclusivos.'
 cover_image: '/assets/posts/img4.jpg'
 author: Swan

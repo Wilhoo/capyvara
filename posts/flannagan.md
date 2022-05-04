@@ -1,6 +1,6 @@
 ---
 title: 'A ‘panelinha’ de Mike Flannagan'
-date: 'Outubro 30, 2021'
+date: '30.10.2021'
 excerpt: 'Veja os atores que participaram de mais de uma produção do roteirista!'
 cover_image: '/assets/posts/img1.jpg'
 author: Swan

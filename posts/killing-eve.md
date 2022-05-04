@@ -1,6 +1,6 @@
 ---
 title: 'Killing Eve e o Bury your gays'
-date: 'Outubro 24, 2022'
+date: '24.04.2022'
 excerpt: 'Final trágico da série causa revolta em fãs e desaponta críticos.'
 cover_image: '/assets/posts/img5.jpg'
 author: Swan

@@ -1,6 +1,6 @@
 ---
 title: 'Violet Evergaden causa emoção em formato de filme (novamente!)'
-date: 'Novembro 08, 2021'
+date: '08.11.2021'
 excerpt: 'Filme traz revelações e permanece com a emoção que a personagem traz desde o anime.'
 cover_image: '/assets/posts/img2.jpg'
 author: Swan
