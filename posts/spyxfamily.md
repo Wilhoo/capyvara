@@ -1,6 +1,7 @@
 ---
 title: 'Spy x Family conquista fãs com trama familiar e vidas secretas de cada um'
 date: '04.05.2022'
+dateList: '05.04.2022'
 excerpt: 'Comédia em torno da família Folger é um dos grandes destaques de 2022.'
 cover_image: '/assets/posts/img6.jpg'
 author: Wilho

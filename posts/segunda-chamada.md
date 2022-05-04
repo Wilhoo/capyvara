@@ -1,6 +1,7 @@
 ---
 title: 'Segunda Chamada se resume em ‘Emocionante, realista, inspiradora e necessária’'
 date: '09.11.2021'
+dateList: '11.09.2021'
 excerpt: 'Na segunda temporada, a série traz à tona novos assuntos essenciais que norteiam a educação do nosso país, além de retomar temas já abordados na sua primeira temporada.'
 cover_image: '/assets/posts/img3.jpg'
 author: Regino Phalange
