@@ -6,13 +6,14 @@ import '../styles/globals.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Script from 'next/script'
+import {GoogleAd} from '../components/GoogleAd';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Script
         id="Adsense-id"
-        data-ad-client="ca-pub-5522037622058893"
+        data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}
         async
         onError={ (e) => { console.error('Script failed to load', e) }}
         // strategy="beforeInteractive"
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       <Footer />
+      <GoogleAd />
     </>
   )
 }

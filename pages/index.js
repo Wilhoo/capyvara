@@ -32,6 +32,12 @@ export default function Home({posts}) {
   const { asPath } = useRouter()
 
   useEffect(() => {
+    if (posts) {
+      localStorage.setItem("posts", JSON.stringify(posts))
+    }
+  }, [posts])
+
+  useEffect(() => {
     if(asPath.includes('search')) {
       setSearch(localStorage.getItem('searchValue'))
 
